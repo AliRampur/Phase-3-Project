@@ -2,9 +2,9 @@
 
 For this project, I used pipelines, validation and grid searches to create the most effective model to predict a binary class (true / false) pertaining to customer churn.
 
-   - Link to Technical Notebook: 
+   - Link to Technical Notebook: https://github.com/AliRampur/Phase-3-Project/blob/main/Phase%203%20Project.ipynb
    - Link to final presentation: 
-   - Link to original data sources: 
+   - Link to original data sources: https://github.com/AliRampur/Phase-3-Project/blob/main/data/SyriaTel%20Customer%20Data.csv
 
 # 2. Business Problem
 
@@ -38,11 +38,11 @@ Our first step in analyzing the data was to verify the total number of records (
 
    Here is a graph of Average Total Charge by Area Code:
    
-   ![image]()
+   ![image](https://github.com/AliRampur/Phase-3-Project/blob/main/pictures/Average%20Total%20Charges%20by%20Area%20Code.png)
 
    
    ### Correlation Heat Map:
-   ![image](https://github.com/AliRampur/Phase-2-Group-Project/blob/main/pics/corr_heatmap.png)
+   ![image](https://github.com/AliRampur/Phase-3-Project/blob/main/pictures/Corr%20Heatmap.png)
 
     
    Although there is a .5 correlation between Total Charge and price per min - total, I kept both features as I felt both were relevant to identifying customers who may chur.
@@ -79,7 +79,7 @@ I then instantiated a pipeline for each of the following models, beginning with 
 
 Using the pipeline and class ModelWithCV(), I applied a 10 kfold cross validation to each of the 7 model pipeline described above and arrived at the following mean scores +/- standard deviations.
 
-![image](https://github.com/AliRampur/Phase-2-Group-Project/blob/main/pics/Scatter_Price%20vs%20Living%20Sqft.png)
+![image](https://github.com/AliRampur/Phase-3-Project/blob/main/pictures/CV%20Mean%20Scores%20and%20STD.png)
 
 Based on the results above, I decided to add in an additional feature described above - 'total charge' - and see if the models could be further improvied.
 
@@ -89,7 +89,7 @@ Based on the results above, I decided to add in an additional feature described 
 
 After adding the 'total charge' feature and rerunning the Pipelines and Cross Validations, here is the updated mean scores and standard deviations for each model type:
 
-![image](https://github.com/AliRampur/Phase-2-Group-Project/blob/main/pics/Scatter_Price%20vs%20Living%20Sqft.png)
+![image](https://github.com/AliRampur/Phase-3-Project/blob/main/pictures/CV%20Mean%20Scores%20and%20STD%20%232.png)
 
 
 Based on the results above, RFC and GBC had the two highest mean scores with a difference of only .006. Therefore, I selected both for consideration using GridSearch and further turning to arrive at the final model.
