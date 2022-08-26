@@ -112,17 +112,17 @@ Based on the results above, RFC and GBC had the two highest mean scores with a d
 
 ### _Grid Searching_
 
-I then applied Grid Search to the two model types (RFC and GBC) with the following parameters:
+I then applied Grid Search to the two model types (RFC and GBC) with the following hyperparameters:
 
 
-    #RFC Paramaters
+    #RFC HyperParamaters
     params = {}
     params['rfc__criterion'] = ['gini','entropy']
     params['rfc__min_samples_leaf'] = [1,5,10]
     params['rfc__max_depth'] = [5,7,9]
 
 
-    #GBC Paramaters
+    #GBC HyperParamaters
     params2 = {"gbc__criterion": ["friedman_mse", "mae", "mse"],
               "gbc__loss":["deviance","exponential"],
               "gbc__max_depth": [3,5],
@@ -135,19 +135,19 @@ With setting a CV = 5, the RFC grid search ran 90 fits and the GBC grid search r
 
 ### _Further Iterations_
 
-Based on results of the grid searches, which resulted in GBC having the higher mean score and higher best score when compared with RFC for each iteration I attempted, I further adjusted and tweaked certain parameters.
+Based on results of the grid searches, which resulted in GBC having the higher mean score and higher best score when compared with RFC for each iteration I attempted, I further adjusted and tweaked certain Hyperparameters.
 
-The best parameters for GBC were:
+The best Hyperparameters for GBC were:
 
-criterion: 'friedman_mse'
-loss: 'deviance'
-max_depth: 3
-min_samples_leaf: 3
-n_estimators: 20
-subsample: 0.9
+ - criterion: 'friedman_mse'
+ - loss: 'deviance'
+ - max_depth: 3
+ - min_samples_leaf: 3
+ - n_estimators: 20
+ - subsample: 0.9
 
 
-However, the GBC best parameters above are still at the end of the given range. If given more time, I would further tune the paramaters (e.g. include max_depth of 1) to see if this would further improve the model accuracy score. 
+However, the GBC best Hyperparameters above are still at the end of the given range. If given more time, I would further tune the Hyperparamaters (e.g. include max_depth of 1) to see if this would further improve the model accuracy score. 
 
 
 # 5. Final Model
