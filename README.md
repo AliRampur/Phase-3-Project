@@ -21,8 +21,8 @@ Our first step in analyzing the data was to verify the total number of records (
    ### Target Feature ('y')
    The target feature or column is the "churn" column. I analyzed the value counts of this column to determine any potential imbalance.
    
-   True = 483 (~86%)
-   False = 2850 (~14%)
+    - True = 483 (~86%)
+    - False = 2850 (~14%)
    
    I was comfortable with the total make up of this target column and moved forward with our analyze without synthetic data creation (e.g. SMOTE).
    
@@ -155,8 +155,8 @@ However, the GBC best Hyperparameters above are still at the end of the given ra
 After applying GridSearch to both the RFC and GBC pipelines, GBC had the higher average CV score and the higher "best score". I then applied the final tuning to the GBC model based on the "best parameters" identified above resulting in the Final Model.
 
 
-Final Score on Train Data: 0.9651860744297719
-Final Score on Test Data: 0.9700239808153477
+ - Final Score on Train Data: 0.9651860744297719
+ - Final Score on Test Data: 0.9700239808153477
 
 As summarized above, I applied the final model to the unseen test data (X_test, y_test), resulting in a score of .97. This is just .005 greater than the train score of .965 above, and therefore, not very indicative of overfitting or underfitting.
 
