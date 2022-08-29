@@ -3,7 +3,7 @@
 For this project, I used pipelines, validation and grid searches to create the most effective model to predict a binary class (true / false) pertaining to customer churn.
 
    - Link to Technical Notebook: https://github.com/AliRampur/Phase-3-Project/blob/main/Phase%203%20Project.ipynb
-   - Link to final presentation: 
+   - Link to final presentation: https://github.com/AliRampur/Phase-3-Project/blob/main/Phase%203%20Presentation.pdf
    - Link to original data sources: https://github.com/AliRampur/Phase-3-Project/blob/main/data/SyriaTel%20Customer%20Data.csv
 
 # 2. Business Problem
